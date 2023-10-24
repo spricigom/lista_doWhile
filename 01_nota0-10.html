@@ -6,10 +6,13 @@
     */
 
     //Entrada
-
+    let num =  Number(prompt("Informe uma nota entre 1 e 10").replace(",","."));
 
     //Processamento
-
+    while (num < 1 || num > 10) {
+        alert("Valor inválido");
+        num = Number(prompt("Informe uma nota entre 1 e 10").replace(",","."));
+    }
 
     //Saída
 

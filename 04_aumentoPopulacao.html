@@ -6,11 +6,19 @@
     */
 
     //Entrada
+    // Pais A 80000 taxa anual 3%
+    // Pais B 200000 taxa anual 1.5%
 
-
+    let A = 200000;
+    let B = 80000;
+    let anos = 0;
     //Processamento
-
+    do {
+        A = A + (A * 3/100);
+        B = B + (B * 1.5/100);
+        anos++;
+    } while (B < A);
 
     //Saída
-
+    alert(`Levara ${anos} anos para o país B ultrapassar o país A`)
 </script>

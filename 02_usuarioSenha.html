@@ -6,10 +6,14 @@
     */
 
     //Entrada
-
+    const usuario = prompt("Informe seu nome de usuário").trim();
+    const senha = prompt("Informe a sua senha").trim();
 
     //Processamento
-
+    while (usuario == senha){
+        alert (`Senha inválida pois é igual ao nome de usuário`);
+        senha = prompt("Informe a sua senha").trim();
+    }
 
     //Saída
 
