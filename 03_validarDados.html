@@ -11,8 +11,29 @@
     */
 
     //Entrada
+    let nome = Number(prompt("informe um nome"));
+    while (nome.length<3) {
+        alert ("dados invalidos!");
+        nome = Number(prompt("informe um nome"));
+    }
 
+    let idade = Number (prompt("informe uma idade "));
+    while (idade<0 || idade>150) {
+        alert ("dados invalidos!");
+        idade = Number (prompt("informe uma idade "));
+    }
 
+    let sexo =prompt("informe um sexo");
+    while (sexo!="F"&&sexo!="M") {
+        alert ("dados invalidos!");
+        sexo =prompt("informe um sexo");
+    }
+
+    let civil = prompt("informe um estado civil")
+    while (civil!="S"&&civil!="C"&&civil!="V"&&civil!="D") {
+        alert ("dados invalidos!");
+        civil = prompt("informe um estado civil")
+    }
     //Processamento
 
 

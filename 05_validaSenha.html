@@ -6,8 +6,12 @@
     */
 
     //Entrada
-
-
+    let senha = Number(prompt("crie uma senha formada por quatro numeros inteiros"));
+    while (senha.toString().length<4 || senha.toString().length>4) {
+        alert("senha incorreta")
+        senha = Number(prompt("crie uma senha formada por quatro numeros inteiros"));
+    }
+    alert("senha correta")
     //Processamento
 
 

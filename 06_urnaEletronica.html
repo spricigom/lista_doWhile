@@ -20,12 +20,32 @@
     */
 
     //Entrada
-
-
+    let joao = 0;
+    let maria = 0;
+    let nulo = 0;
+    let branco = 0;
+    let voto = 1;
     //Processamento
-
-
+    while (voto != 0) {
+        voto = Number(prompt("1- Joãozinho. 2- Mariazinha. 3- Nulo. 4-Branco."));
+        switch (voto) {
+            case 1: joao++; break;
+            case 2: maria++; break;
+            case 3: nulo++; break;
+            case 4: branco++; break;
+            case 0: break;
+            default:
+                alert("Valor Inválido")
+                break;
+        }
+    }
     //Saída
+    document.write(`Quantidade de votos gerais: ${joao+maria+nulo+branco} <br>
+     Quantidade de votos do Joãozinho: ${joao}<br>
+     Quantidade de votos da Mariazinha: ${maria} <br> 
+     Porcentagem de votos em branco: ${(branco/(joao+maria+nulo+branco)*100).toFixed(1)}% <br>
+      Porcentagem de votos nulos: ${(nulo/(joao+maria+nulo+branco)*100).toFixed(1)}% <br>
+       ${(joao > maria)? "joaozinho foi o vencedor" : "mariazinha foi a vencedora"}`);
 
 </script>
 
