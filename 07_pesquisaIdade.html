@@ -13,6 +13,36 @@
     */
 
     //Entrada
+    let idade = [];
+    let sexo = [];
+    let salario = [];
+    let mulheres = 0;
+    let idadeI = 0;
+    let qtdMulher = 0;
+    while(idadeI >= 0){
+        idadeI = Number(prompt(`Informe sua idade`));
+        if(idadeI < 0){break};
+        if(idadeI >= 0){
+            idade.push(idadeI);
+        }
+        let sexoI = prompt(`Qual seu sexo? F-Feminino ; M-Masculino`).toUpperCase();
+        sexo.push(sexoI);
+        if(sexoI == "F"){qtdMulher++};
+        let salarioI = Number(prompt(`Informe seu salario`));
+        salario.push(salarioI);
+    };
+    let salarioMedia = salario.reduce((soma, valor) => soma + valor, 0) / salario.length;
+    let maiorIdade = Math.max(...idade);
+    let menorIdade = Math.min(...idade);
+    document.write(`A media dos salarios da região é: R$${salarioMedia.toFixed(2)} <br> A maior idade da região é ${maiorIdade} anos <br> A menor idade da região é ${menorIdade} anos <br> A quantidade de mulheres na região: ${qtdMulher} <br>`);
+    let menorSalario = Math.min(...salario);
+    document.write(`Pessoa(s) com menor(res) salario(s): <br>`);
+    for(i = salario.length-1; i >= 0; i--){
+        if(salario[i] == menorSalario){
+            document.write(`Idade ${idade[i]} anos, e seu sexo é ${(sexo[i] == "M")? "masculino" : "feminino"} <br>`);
+        };
+    };
+    
 
 
     //Processamento
